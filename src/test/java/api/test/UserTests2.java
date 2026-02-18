@@ -34,7 +34,7 @@ public class UserTests2 {
     }
     @Test(priority = 0)
     public  void test2PostUser() throws IOException {
-
+// this tests we using config.property file using resource bundle
         logger.debug("***************** creating user *************************");
         Response response= UserEndPoints2.createUser(userPayload);
         response.then().log().all();
