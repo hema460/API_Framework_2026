@@ -25,7 +25,9 @@ public class ExtentReportManager implements ITestListener {
         repName = "Test-Report-" + timeStamp + ".html";
 
         // Specify the location of the report (your reports folder)
-        sparkReporter = new ExtentSparkReporter(".\\z_reports\\" + repName);
+        String path = System.getProperty("user.dir") + "\\z_reports\\" + repName;
+        sparkReporter = new ExtentSparkReporter(path);
+
 
         sparkReporter.config().setDocumentTitle("RestAssured Automation Project"); // Title of report
         sparkReporter.config().setReportName("Pet Store Users API"); // Name of the report
