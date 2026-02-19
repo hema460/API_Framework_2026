@@ -35,6 +35,7 @@ public class UserTests2 {
     @Test(priority = 0)
     public  void test2PostUser() throws IOException {
         //webhook updated for the final time at 10:37
+        //last run at 10:40
         logger.debug("***************** creating user *************************");
         Response response= UserEndPoints2.createUser(userPayload);
         response.then().log().all();
