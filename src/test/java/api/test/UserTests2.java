@@ -34,9 +34,7 @@ public class UserTests2 {
     }
     @Test(priority = 0)
     public  void test2PostUser() throws IOException {
-// this tests we using config.property file using resource bundle
-        //webhook test at 10:07pm
-        //webhook updated at 10:15
+        //webhook updated for the final time at 10:37
         logger.debug("***************** creating user *************************");
         Response response= UserEndPoints2.createUser(userPayload);
         response.then().log().all();
