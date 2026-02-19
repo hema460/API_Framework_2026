@@ -36,7 +36,7 @@ public class UserTests {
     @Test(priority = 0)
     public  void testPostUser() throws IOException {
 //using routes class where giving base uri and endpoints
-        //this is a post user
+       //this is to test webhooks
         logger.debug("***************** creating user *************************");
         Response response= UserEndPoints.createUser(userPayload);
         response.then().log().all();
