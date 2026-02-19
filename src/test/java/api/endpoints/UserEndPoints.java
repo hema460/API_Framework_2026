@@ -26,14 +26,14 @@ public class UserEndPoints {
     }
 
     public static Response updateUser(String userName,User payload){
-        Response response=given().accept(ContentType.JSON).contentType(ContentType.JSON).pathParam("username",userName).body(payload).when().put(Routes.get_url);
+        Response response=given().log().all().accept(ContentType.JSON).contentType(ContentType.JSON).pathParam("username",userName).body(payload).when().put(Routes.get_url);
 
         return response;
     }
 
 
     public static Response deleteUser(String userName){
-        Response response=given().pathParam("username",userName).when().get(Routes.delete_url);
+        Response response=given().log().all().pathParam("username",userName).when().get(Routes.delete_url);
 
         return response;
     }
